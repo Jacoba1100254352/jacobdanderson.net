@@ -1,0 +1,30 @@
+/**************
+*   Section   *
+**************/
+
+.section {
+	background-color: whitesmoke;
+	padding: 10px 20px;
+}
+
+#italic {
+	font-style: italic;
+}
+
+@media screen and (min-width:1200px) {
+	.flexbox_container{ display: flex; justify-content: space-between; flex-flow: row wrap; }
+	article {
+		display: flex;
+	}
+}
+
+h2 {
+	font-weight: bold;
+	text-align: center;
+	font-size: 125%;
+	padding-bottom: 5px;
+}
+
+ul, ol { list-style-position: inside; }
+ol { list-style-type: decimal; }
+ul { list-style-type: disc; }

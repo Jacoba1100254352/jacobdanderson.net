@@ -1,0 +1,63 @@
+/**************
+*   General   *
+**************/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 20px;
+	background-color: lightblue;
+	font-family: sans-serif;
+	--size_adjustment: 1.5;
+	min-width: 700px;
+}
+
+/**************
+*   Heading   *
+**************/
+
+header {
+	/* margin: 10px; */
+}
+
+h1 {
+	font-weight: bold;
+	text-align: center;
+	font-size: 150%;
+	padding-bottom: 5px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+/*****************
+*   Navigation   *
+*****************/
+
+nav.local{ position: relative; margin-top: 2%; }
+nav.local li{ width: calc(100%/4); }
+nav.local a{ color: black; display: block; padding: 3%; }
+
+ul.flexbox_container{ 
+	flex-flow: row nowrap;
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+}
+li.pseudo_element{ outline: 1px solid; background-color: rgb(160,160,160); }
+#pseudo_list li{ min-width: 80px; }
+#pseudo_list{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+#real_list, #real_list li{
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+}
