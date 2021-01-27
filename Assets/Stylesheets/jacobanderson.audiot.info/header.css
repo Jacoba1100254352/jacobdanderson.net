@@ -38,7 +38,7 @@ a {
 *   Navigation   *
 *****************/
 
-nav.local{ position: relative; margin-top: 2%; }
+nav.local{ position: relative; }
 nav.local li{ width: calc(100%/4); }
 nav.local a{ color: black; display: block; padding: 3%; }
 
