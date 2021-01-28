@@ -42,16 +42,19 @@ ul { list-style-type: disc; }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-  ul.flexbox_container{ 
+  	body {
+		max-width: 960px;
+	}
+	ul.flexbox_container{ 
 	flex-flow: row wrap;
-  }
-  nav.local {
-  	width: 50%;
-  }
-  nav.local ul li {
-  	width: 50%;
-  }
-  .section {
-    width: 50%;
-  }
+	}
+	nav.local {
+		width: 50%;
+	}
+	nav.local ul li {
+		width: 50%;
+	}
+	.section {
+	max-width: 960px;
+	}
 }
