@@ -7,7 +7,7 @@
 footer a:hover{  background: rgb(110,110,110); }
 footer a:active{ background: rgb(100,100,100); } */
 
-@media screen and (min-width:1200px) {
+/* @media screen and (min-width:1200px) { */
 	footer h2 {
 		width: 100%;
 	}
@@ -22,4 +22,4 @@ footer a:active{ background: rgb(100,100,100); } */
 		justify-content: space-around;
 		list-style: none;
 	}
-}
+/* } */
