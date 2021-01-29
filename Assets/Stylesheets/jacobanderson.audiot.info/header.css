@@ -7,10 +7,10 @@
 }
 
 body {
-	margin: 20px;
+	margin: 20px 2%;
 	background-color: lightblue;
 	font-family: sans-serif;
-	--size_adjustment: 1.5;
+	/* --size_adjustment: 1.5; */
 	min-width: 700px;
 }
 
