@@ -1,30 +1,21 @@
 <template>
   <div id="app">
-    <!------------
-    -   Header   -
-    ------------->
-
-    <header id="about_me" class="section">
-      <h1>About Me</h1>
-      <p>
-        My name is Jacob Anderson, I am from Georgia and absolutely love music!
-      </p>
-    </header>
-
     <!----------------
     -   Navigation   -
     ----------------->
 
     <nav class="local">
       <ul id="real_list" class="flexbox_container">
-        <li><a href="#about_me">About Me</a></li>
+        <li><router-link to="/">Home</router-link></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
       <!-- Note: this is a pseudo container, for design only -->
       <ul id="pseudo_list" class="flexbox_container">
+        <li class="pseudo_element"></li>
         <li class="pseudo_element"></li>
         <li class="pseudo_element"></li>
         <li class="pseudo_element"></li>
@@ -47,11 +38,19 @@
       <nav class="footer_nav">
         <ul>
           <li>
-            <a href="https://www.facebook.com/jacoba1100254352">Facebook</a>
+            <a href="https://www.facebook.com/jacoba1100254352" target="_blank"
+            >Facebook</a
+            >
           </li>
-          <li><a href="https://www.github.com/Jacoba1100254352">Github</a></li>
           <li>
-            <a href="https://www.instagram.com/jacoba1100254352">Instagram</a>
+            <a href="https://www.github.com/Jacoba1100254352" target="_blank"
+            >Github</a
+            >
+          </li>
+          <li>
+            <a href="https://www.instagram.com/jacoba1100254352" target="_blank"
+            >Instagram</a
+            >
           </li>
         </ul>
       </nav>
@@ -125,99 +124,21 @@ table {
 }
 
 body {
-  margin: 20px 0%;
   background-color: lightblue;
   font-family: sans-serif;
-  /* --size_adjustment: 1.5; */
+
+  --nav_height: calc(2 * var(--size_adjustment));
+  /*--common_background_color: white;*/
+
+  --text_scalar: 1;
+  --size_adjustment: 1.5;
 }
-
-/* header, nav, section, footer {
-	margin: 0px 2%;
-} */
-
-/**************
-*   Heading   *
-**************/
-
-header {
-  margin: 10px;
-}
-
-header p {
-  text-align: center;
-}
-
-h1 {
-  font-weight: bold;
-  text-align: center;
-  font-size: 150%;
-  padding-bottom: 5px;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-/*****************
-*   Navigation   *
-*****************/
-
-nav.local {
-  position: relative;
-}
-
-nav.local li {
-  width: calc(100% / 4);
-}
-
-nav.local a {
-  color: black;
-  display: block;
-  padding: 3%;
-}
-
-ul.flexbox_container {
-  flex-flow: row nowrap;
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-}
-
-li.pseudo_element {
-  outline: 1px solid;
-  background-color: rgb(160, 160, 160);
-}
-
-#pseudo_list li {
-  min-width: 80px;
-}
-
-#pseudo_list {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-
-#real_list,
-#real_list li {
-  text-align: center;
-  align-items: center;
-  z-index: 1;
-}
-
-/**************
-*   Section   *
-**************/
 
 .section {
   background-color: whitesmoke;
   padding: 10px 20px;
-}
-
-#italic {
-  font-style: italic;
+  margin: 1%;
+  text-align: center;
 }
 
 h2 {
@@ -227,22 +148,9 @@ h2 {
   padding-bottom: 5px;
 }
 
-ul,
-ol {
-  list-style-position: inside;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-ul {
-  list-style-type: disc;
-}
-
-/**************
-*   Article   *
-**************/
+/********************
+*   Media Screens   *
+********************/
 
 @media screen and (min-width: 961px) {
   .flexbox_container {
@@ -285,6 +193,66 @@ ul {
   }
 }
 
+/*****************
+*   Navigation   *
+*****************/
+
+/*nav.local,*/
+/*#real_list,*/
+/*#pseudo_list {*/
+/*  margin-bottom: 2%;*/
+/*}*/
+
+nav.local {
+  position: relative;
+}
+
+nav.local li {
+  width: calc(100% / 5);
+}
+
+nav.local a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 3%;
+}
+
+ul.flexbox_container {
+  flex-flow: row nowrap;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+li.pseudo_element {
+  background-color: rgb(160, 160, 160);
+}
+
+#pseudo_list li {
+  min-width: 80px;
+}
+
+#pseudo_list {
+  outline: 1px solid;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+#real_list,
+#real_list li {
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+}
+
+nav.local > ul > li {
+  width: 20%;
+  line-height: var(--nav_height);
+}
+
 /*************
 *   Footer   *
 *************/
@@ -294,7 +262,6 @@ ul {
 footer a:hover{  background: rgb(110,110,110); }
 footer a:active{ background: rgb(100,100,100); } */
 
-/* @media screen and (min-width:1200px) { */
 footer h2 {
   width: 100%;
 }
@@ -309,6 +276,4 @@ footer ul {
   justify-content: space-around;
   list-style: none;
 }
-
-/* } */
 </style>
