@@ -8,9 +8,9 @@
       <h1>About</h1>
       <figure>
         <img
-            id="prof_pic"
-            alt="Jacob Anderson"
-            src="../../public/Images/Jacob_Anderson.jpg"
+          id="prof_pic"
+          alt="Jacob Anderson"
+          src="../../public/Images/Jacob_Anderson.jpg"
         />
         <!--        <figcaption>David Anderson</figcaption>-->
       </figure>
@@ -40,7 +40,7 @@
         </ul>
       </article>
 
-      <hr/>
+      <hr />
 
       <article id="experience">
         <h2>Experience</h2>
@@ -61,8 +61,7 @@ export default {
   data() {
     return {};
   },
-  created() {
-  },
+  created() {},
   methods: {},
 };
 </script>

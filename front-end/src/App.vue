@@ -7,9 +7,9 @@
     <nav class="local">
       <ul id="real_list" class="flexbox_container">
         <li><router-link to="/">Home</router-link></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
@@ -27,7 +27,7 @@
     -   Router View   -
     ------------------>
 
-    <router-view/>
+    <router-view />
 
     <!------------
     -   Footer   -
@@ -39,17 +39,17 @@
         <ul>
           <li>
             <a href="https://www.facebook.com/jacoba1100254352" target="_blank"
-            >Facebook</a
+              >Facebook</a
             >
           </li>
           <li>
             <a href="https://www.github.com/Jacoba1100254352" target="_blank"
-            >Github</a
+              >Github</a
             >
           </li>
           <li>
             <a href="https://www.instagram.com/jacoba1100254352" target="_blank"
-            >Instagram</a
+              >Instagram</a
             >
           </li>
         </ul>
@@ -71,8 +71,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video /* eslint-disable-line */
-{
+time, mark, audio, video /* eslint-disable-line */ {
   margin: 0;
   padding: 0;
   border: 0;
@@ -83,8 +82,7 @@ time, mark, audio, video /* eslint-disable-line */
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section /* eslint-disable-line */
-{
+footer, header, hgroup, menu, nav, section /* eslint-disable-line */ {
   display: block;
 }
 
