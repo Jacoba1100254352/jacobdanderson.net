@@ -7,12 +7,12 @@
     <nav class="local">
       <ul id="real_list" class="flexbox_container">
         <li>
-          <router-link to="/">Home</router-link>
+          <router-link class="nav-link" to="/">Home</router-link>
         </li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Experience</a></li>
         <li>
-          <router-link to="/about">About</router-link>
+          <router-link class="nav-link" to="/about">About</router-link>
         </li>
         <li><a href="#contact">Contact</a></li>
       </ul>

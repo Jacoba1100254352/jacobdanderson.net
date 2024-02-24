@@ -13,9 +13,6 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // connect to the database
-mongoose.connect('mongodb://localhost:27017/jacobanderson', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+mongoose.connect('mongodb://localhost:27017/jacobdanderson').then(() => console.log('Connected to the database!'));
 
 app.listen(3005, () => console.log('Server listening on port 3005!'));
