@@ -12,7 +12,7 @@
           alt="Jacob Anderson"
           src="../../public/Images/Jacob_Anderson.jpg"
         />
-        <!--        <figcaption>David Anderson</figcaption>-->
+        <!--        <figcaption>Jacob Anderson</figcaption>-->
       </figure>
 
       <p>
