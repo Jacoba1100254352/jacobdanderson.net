@@ -55,15 +55,26 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+
+@Options({
   name: "HomePage",
+})
+export default class HomePage extends Vue {
+  // If you have data, computed properties, methods, etc., they can be added here.
+  // For example, a simple data property would look like this:
   data() {
-    return {};
-  },
-  created() {},
-  methods: {},
-};
+    return {
+      // your data properties here
+    };
+  }
+
+  // Example of a lifecycle hook
+  created() {
+    // your created hook logic here
+  }
+}
 </script>
 
 <style scoped>

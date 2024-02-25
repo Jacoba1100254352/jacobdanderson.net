@@ -4,7 +4,7 @@
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
-      <a href="https://cli.vuejs.org" rel="noopener" target="_blank"
+      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
         >vue-cli documentation</a
       >.
     </p>
@@ -12,81 +12,65 @@
     <ul>
       <li>
         <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          rel="noopener"
+          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript"
           target="_blank"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
           rel="noopener"
-          target="_blank"
-          >router</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          rel="noopener"
-          target="_blank"
-          >eslint</a
+          >typescript</a
         >
       </li>
     </ul>
     <h3>Essential Links</h3>
     <ul>
       <li>
-        <a href="https://vuejs.org" rel="noopener" target="_blank">Core Docs</a>
+        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
       </li>
       <li>
-        <a href="https://forum.vuejs.org" rel="noopener" target="_blank"
+        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
           >Forum</a
         >
       </li>
       <li>
-        <a href="https://chat.vuejs.org" rel="noopener" target="_blank"
+        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
           >Community Chat</a
         >
       </li>
       <li>
-        <a href="https://twitter.com/vuejs" rel="noopener" target="_blank"
+        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
           >Twitter</a
         >
       </li>
       <li>
-        <a href="https://news.vuejs.org" rel="noopener" target="_blank">News</a>
+        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
       </li>
     </ul>
     <h3>Ecosystem</h3>
     <ul>
       <li>
-        <a href="https://router.vuejs.org" rel="noopener" target="_blank"
+        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
           >vue-router</a
         >
       </li>
       <li>
-        <a href="https://vuex.vuejs.org" rel="noopener" target="_blank">vuex</a>
+        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
       </li>
       <li>
         <a
           href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          rel="noopener"
           target="_blank"
+          rel="noopener"
           >vue-devtools</a
         >
       </li>
       <li>
-        <a href="https://vue-loader.vuejs.org" rel="noopener" target="_blank"
+        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
           >vue-loader</a
         >
       </li>
       <li>
         <a
           href="https://github.com/vuejs/awesome-vue"
-          rel="noopener"
           target="_blank"
+          rel="noopener"
           >awesome-vue</a
         >
       </li>
@@ -94,13 +78,17 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "HelloWorld",
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+
+@Options({
   props: {
     msg: String,
   },
-};
+})
+export default class HelloWorld extends Vue {
+  msg!: string;
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -108,17 +96,14 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
 }
-
 li {
   display: inline-block;
   margin: 0 10px;
 }
-
 a {
   color: #42b983;
 }

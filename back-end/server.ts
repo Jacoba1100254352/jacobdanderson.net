@@ -1,8 +1,8 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+import express, { Express } from 'express';
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
 
-const app = express();
+const app: Express = express();
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
