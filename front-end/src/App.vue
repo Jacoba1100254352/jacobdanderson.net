@@ -280,4 +280,14 @@ footer ul {
 }
 </style>
 
-<script setup></script>
+<script lang="ts">
+import { defineComponent, computed } from "vue";
+import { useStore } from "vuex";
+
+export default defineComponent({
+	name: "App", // Replace with your component name
+	setup() {
+		const store = useStore();
+	},
+});
+</script>
