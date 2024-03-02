@@ -6,24 +6,11 @@
 
     <nav class="local">
       <ul id="real_list" class="flexbox_container">
-        <li>
-          <router-link class="nav-link" to="/">Home</router-link>
-        </li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Experience</a></li>
-        <li>
-          <router-link class="nav-link" to="/about">About</router-link>
-        </li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <!-- Note: this is a pseudo container, for design only -->
-      <ul id="pseudo_list" class="flexbox_container">
-        <li class="pseudo_element"></li>
-        <li class="pseudo_element"></li>
-        <li class="pseudo_element"></li>
-        <li class="pseudo_element"></li>
-        <li class="pseudo_element"></li>
+        <li><router-link class="nav-link" to="/">Home</router-link></li>
+        <li><router-link class="nav-link" to="/projects">Projects</router-link></li>
+        <li><router-link class="nav-link" to="/experience">Experience</router-link></li>
+        <li><router-link class="nav-link" to="/about">About</router-link></li>
+        <li><router-link class="nav-link" to="/contact">Contact</router-link></li>
       </ul>
     </nav>
 
@@ -61,6 +48,14 @@
     </footer>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+	name: "App",
+});
+</script>
 
 <style>
 html, body, div, span, applet, object, iframe,
@@ -143,13 +138,6 @@ body {
   text-align: center;
 }
 
-h2 {
-  font-weight: bold;
-  text-align: center;
-  font-size: 125%;
-  padding-bottom: 5px;
-}
-
 /********************
 *   Media Screens   *
 ********************/
@@ -195,6 +183,53 @@ h2 {
   }
 }
 
+/******************
+*   Router View   *
+******************/
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 125%;
+  padding-bottom: 5px;
+  margin: 0;
+  color: #2a6496;
+}
+
+h2 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 100%;
+  padding-bottom: 5px;
+  margin: 0;
+  color: #2a6496;
+}
+
+.page {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.item {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item p {
+  margin-top: 10px;
+  color: #333;
+}
+
+
 /*****************
 *   Navigation   *
 *****************/
@@ -227,27 +262,17 @@ ul.flexbox_container {
   list-style-type: none;
 }
 
-li.pseudo_element {
+nav.local li {
+  width: calc(100% / 5);
   background-color: rgb(160, 160, 160);
-}
-
-#pseudo_list li {
-  min-width: 80px;
-}
-
-#pseudo_list {
-  outline: 1px solid;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-
-#real_list,
-#real_list li {
-  text-align: center;
+  border-right: 1px solid black;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  z-index: 1;
+}
+
+nav.local li:last-child {
+  border-right: none;
 }
 
 nav.local > ul > li {
@@ -279,15 +304,3 @@ footer ul {
   list-style: none;
 }
 </style>
-
-<script lang="ts">
-import { defineComponent, computed } from "vue";
-import { useStore } from "vuex";
-
-export default defineComponent({
-	name: "App", // Replace with your component name
-	setup() {
-		const store = useStore();
-	},
-});
-</script>

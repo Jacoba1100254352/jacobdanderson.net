@@ -1,6 +1,9 @@
 <template>
-  <div class="About">
-    <h1>This is an about page</h1>
+  <div class="page">
+    <h1>About Me</h1>
+    <div class="item">
+      <p>{{ about }}</p>
+    </div>
   </div>
 </template>
 
@@ -9,9 +12,16 @@ import { defineComponent, computed } from "vue";
 import { useStore } from "vuex";
 
 export default defineComponent({
-	name: "AboutPage", // Replace with your component name
+	name: "AboutPage",
 	setup() {
 		const store = useStore();
-	},
+		const about = computed(() => store.state.userProfile.about);
+
+		return { about };
+	}
 });
 </script>
+
+<style scoped>
+
+</style>
