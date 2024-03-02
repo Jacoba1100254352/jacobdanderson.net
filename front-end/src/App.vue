@@ -20,11 +20,15 @@
 
     <router-view />
 
+    <!-- Additional Router View for Contact Page on Home Page -->
+
+    <router-view v-if="route.path === '/'" name="contact" />
+
     <!------------
     -   Footer   -
     ------------->
 
-    <footer id="contact" class="section flexbox_container">
+    <footer v-if="route.path !== '/'" id="contact" class="section flexbox_container">
       <h2>Contact</h2>
       <nav class="footer_nav">
         <ul>
@@ -51,9 +55,14 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { useRoute } from "vue-router";
 
 export default defineComponent({
 	name: "App",
+	setup() {
+		const route = useRoute();
+		return { route };
+	}
 });
 </script>
 
@@ -187,22 +196,20 @@ body {
 *   Router View   *
 ******************/
 
-h1 {
+h1, h2 {
   font-weight: bold;
   text-align: center;
-  font-size: 125%;
   padding-bottom: 5px;
   margin: 0;
   color: #2a6496;
 }
 
+h1 {
+  font-size: 125%;
+}
+
 h2 {
-  font-weight: bold;
-  text-align: center;
   font-size: 100%;
-  padding-bottom: 5px;
-  margin: 0;
-  color: #2a6496;
 }
 
 .page {
@@ -288,6 +295,15 @@ nav.local > ul > li {
 /* footer a:link, footer a:visited, footer a:focus{ background: rgb(128,128,128); }
 footer a:hover{  background: rgb(110,110,110); }
 footer a:active{ background: rgb(100,100,100); } */
+
+footer {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
 
 footer h2 {
   width: 100%;
