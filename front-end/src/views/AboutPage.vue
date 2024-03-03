@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+    <img src="../assets/ProfilePic.jpg" alt="Profile Picture" class="profile-pic">
     <h1>About Me</h1>
     <div class="item">
       <p>{{ about }}</p>
@@ -23,5 +24,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+.profile-pic {
+  display: block;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 20px auto;
+}
 </style>

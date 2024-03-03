@@ -1,6 +1,6 @@
 {
   "name": "front-end",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "author": "Jacob Anderson",
   "keywords": [],
@@ -13,11 +13,12 @@
   },
   "main": "dist/script.js",
   "dependencies": {
-    "axios": "^1.6.7",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",
     "vue": "^3.4.21",
-    "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.3.0",
     "vuex": "^4.1.0"
   },
