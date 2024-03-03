@@ -1,4 +1,4 @@
-import { createStore } from "vuex";
+import {createStore} from "vuex";
 
 const store = createStore({
 	state() {
@@ -6,7 +6,7 @@ const store = createStore({
 			userProfile: {
 				name: "Jacob Anderson",
 				age: 23,
-				interests: ["Metal Core Music", "Programming", "Chess", "Playing Piano and Trombone", "DnD"],
+				interests: ["Music", "Programming", "Chess", "Playing Piano"],
 				about: "My name is Jacob Anderson, I am from Georgia and absolutely love music!",
 				education: [
 					{
@@ -16,13 +16,8 @@ const store = createStore({
 					},
 					{
 						degree: "College classes while in HS",
-						institution: "Georgia State University, Alpharetta, GA",
+						institution: "Georgia State University",
 						description: "GPA 3.52, Aug 2017 to May 2018",
-					},
-					{
-						degree: "High School",
-						institution: "Home schooled",
-						description: "2014 to 2018",
 					}
 				],
 				work: [

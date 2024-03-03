@@ -6,19 +6,28 @@
       <p>{{ about }}</p>
     </div>
   </div>
+
+  <!-- Do not show Education Component on home page -->
+  <EducationComponent v-if="route.path !== '/'"/>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from "vue";
-import { useStore } from "vuex";
+import {computed, defineComponent} from "vue";
+import {useStore} from "vuex";
+import EducationComponent from "@/components/EducationComponent.vue";
+import {useRoute} from "vue-router";
 
 export default defineComponent({
 	name: "AboutPage",
+	components: {
+		EducationComponent
+	},
 	setup() {
 		const store = useStore();
 		const about = computed(() => store.state.userProfile.about);
+		const route = useRoute();
 
-		return { about };
+		return {about, route};
 	}
 });
 </script>

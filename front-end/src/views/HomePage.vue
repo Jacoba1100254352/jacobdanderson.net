@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">
+  <div class="page">
     <AboutPage class="about" />
     <div class="projects-experience">
       <ProjectsPage class="projects" />
@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import {defineComponent} from "vue";
 import AboutPage from "./AboutPage.vue";
 import ProjectsPage from "./ProjectsPage.vue";
 import ExperiencePage from "./ExperiencePage.vue";
@@ -25,15 +25,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.home-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-  background-color: #f5f5f5;
-}
-
 .about {
   width: 100%;
 }
@@ -49,10 +40,6 @@ export default defineComponent({
 }
 
 @media (max-width: 600px) {
-  .home-page {
-    flex-direction: column;
-  }
-
   .projects-experience {
     flex-direction: column;
   }

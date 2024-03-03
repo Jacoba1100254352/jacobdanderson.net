@@ -21,8 +21,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { useRoute } from "vue-router";
+import {defineComponent} from "vue";
+import {useRoute} from "vue-router";
 import FooterComponent from "./components/FooterComponent.vue";
 
 export default defineComponent({
@@ -37,13 +37,16 @@ export default defineComponent({
 });
 </script>
 
+<!--suppress CssUnusedSymbol -->
 <style>
 /**************
 *   General   *
 **************/
 
 body {
-  background-color: black;
+  background-color: #f5f5f5;
+  font-size: 110%;
+  margin: 0;
 }
 
 /******************
@@ -59,11 +62,11 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 125%;
+  font-size: 200%;
 }
 
 h2 {
-  font-size: 100%;
+  font-size: 150%;
 }
 
 .page {
@@ -87,7 +90,6 @@ h2 {
 
 .item p {
   margin-top: 10px;
-  color: #333;
 }
 
 
@@ -99,9 +101,10 @@ nav.local {
   position: relative;
 }
 
-nav.local a {
-  display: block;
+.nav-link {
+  text-decoration: none;
   padding: 3%;
+  color: black;
 }
 
 ul.flexbox_container {
