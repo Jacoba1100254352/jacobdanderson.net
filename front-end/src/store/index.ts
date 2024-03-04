@@ -106,7 +106,7 @@ const store = createStore({
 	},
 	mutations: {
 		updateUserProfile(state, payload) {
-			state.userProfile = { ...state.userProfile, ...payload };
+			state.userProfile = {...state.userProfile, ...payload};
 		}
 	},
 	actions: {

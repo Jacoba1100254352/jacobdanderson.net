@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <img src="../assets/ProfilePic.jpg" alt="Profile Picture" class="profile-pic">
+    <img alt="Profile Picture" class="profile-pic" src="../../public/Images/Jacob_Anderson.jpg">
     <h1>About Me</h1>
     <div class="item">
       <p>{{ about }}</p>

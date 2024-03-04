@@ -9,8 +9,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from "vue";
-import { useStore } from "vuex";
+import {computed, defineComponent} from "vue";
+import {useStore} from "vuex";
 
 export default defineComponent({
 	name: "ProjectsPage",
@@ -18,7 +18,7 @@ export default defineComponent({
 		const store = useStore();
 		const projects = computed(() => store.state.userProfile.projects);
 
-		return { projects };
+		return {projects};
 	}
 });
 </script>

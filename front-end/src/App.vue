@@ -5,20 +5,24 @@
         <li :class="{ 'expanded': isExpanded, 'active': activeLink === 'Home' }" @click="toggleMenu()">
           <router-link class="nav-link" to="/" @click="setActiveLink('Home', $event)">Home</router-link>
         </li>
-        <li v-for="(link, index) in links" :key="index" :class="{ 'expanded': isExpanded, 'active': activeLink === link.name }" @click="toggleMenu()">
-          <router-link :to="link.path" class="nav-link" @click="setActiveLink(link.name, $event)">{{ link.name }}</router-link>
+        <li v-for="(link, index) in links" :key="index"
+            :class="{ 'expanded': isExpanded, 'active': activeLink === link.name }" @click="toggleMenu()">
+          <router-link :to="link.path" class="nav-link" @click="setActiveLink(link.name, $event)">{{
+              link.name
+            }}
+          </router-link>
         </li>
       </ul>
     </nav>
 
     <div class="content">
-      <router-view />
+      <router-view/>
 
       <!-- Additional Router View for Contact Page on Home Page -->
-      <router-view v-if="route.path === '/'" name="contact" />
+      <router-view v-if="route.path === '/'" name="contact"/>
 
       <!-- Footer Component -->
-      <FooterComponent v-if="route.path !== '/'" />
+      <FooterComponent v-if="route.path !== '/'"/>
     </div>
   </div>
 </template>
@@ -37,10 +41,10 @@ export default defineComponent({
 		const route = useRoute();
 		const isExpanded = ref(false);
 		const links = ref([
-			{ name: "Projects", path: "/projects" },
-			{ name: "Experience", path: "/experience" },
-			{ name: "About", path: "/about" },
-			{ name: "Contact", path: "/contact" },
+			{name: "Projects", path: "/projects"},
+			{name: "Experience", path: "/experience"},
+			{name: "About", path: "/about"},
+			{name: "Contact", path: "/contact"},
 		]);
 
 		const toggleMenu = () => {
@@ -54,7 +58,7 @@ export default defineComponent({
 			activeLink.value = linkName;
 		};
 
-		return { route, isExpanded, links, toggleMenu, activeLink, setActiveLink };
+		return {route, isExpanded, links, toggleMenu, activeLink, setActiveLink};
 	}
 });
 </script>

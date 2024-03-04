@@ -1,9 +1,9 @@
 <template>
   <div class="page">
-    <AboutPage class="about" />
+    <AboutPage class="about"/>
     <div class="projects-experience">
-      <ProjectsPage class="projects" />
-      <ExperiencePage class="experience" />
+      <ProjectsPage class="projects"/>
+      <ExperiencePage class="experience"/>
     </div>
   </div>
 </template>
@@ -39,6 +39,10 @@ export default defineComponent({
   width: 50%;
 }
 
+.projects {
+  margin-right: 10px;
+}
+
 @media (max-width: 600px) {
   .projects-experience {
     flex-direction: column;
@@ -46,6 +50,7 @@ export default defineComponent({
 
   .projects, .experience {
     width: 100%;
+    margin: 0;
   }
 }
 </style>
