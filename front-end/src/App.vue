@@ -2,26 +2,29 @@
   <div id="app">
     <nav class="local">
       <ul id="real_list" class="flexbox_container">
-        <li><router-link class="nav-link" to="/">Home</router-link></li>
-        <li><router-link class="nav-link" to="/projects">Projects</router-link></li>
-        <li><router-link class="nav-link" to="/experience">Experience</router-link></li>
-        <li><router-link class="nav-link" to="/about">About</router-link></li>
-        <li><router-link class="nav-link" to="/contact">Contact</router-link></li>
+        <li :class="{ 'expanded': isExpanded, 'active': activeLink === 'Home' }" @click="toggleMenu()">
+          <router-link class="nav-link" to="/" @click="setActiveLink('Home', $event)">Home</router-link>
+        </li>
+        <li v-for="(link, index) in links" :key="index" :class="{ 'expanded': isExpanded, 'active': activeLink === link.name }" @click="toggleMenu()">
+          <router-link :to="link.path" class="nav-link" @click="setActiveLink(link.name, $event)">{{ link.name }}</router-link>
+        </li>
       </ul>
     </nav>
 
-    <router-view />
+    <div class="content">
+      <router-view />
 
-    <!-- Additional Router View for Contact Page on Home Page -->
-    <router-view v-if="route.path === '/'" name="contact" />
+      <!-- Additional Router View for Contact Page on Home Page -->
+      <router-view v-if="route.path === '/'" name="contact" />
 
-    <!-- Footer Component -->
-    <FooterComponent v-if="route.path !== '/'" />
+      <!-- Footer Component -->
+      <FooterComponent v-if="route.path !== '/'" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue";
+import {defineComponent, ref} from "vue";
 import {useRoute} from "vue-router";
 import FooterComponent from "./components/FooterComponent.vue";
 
@@ -32,7 +35,26 @@ export default defineComponent({
 	},
 	setup() {
 		const route = useRoute();
-		return { route };
+		const isExpanded = ref(false);
+		const links = ref([
+			{ name: "Projects", path: "/projects" },
+			{ name: "Experience", path: "/experience" },
+			{ name: "About", path: "/about" },
+			{ name: "Contact", path: "/contact" },
+		]);
+
+		const toggleMenu = () => {
+			isExpanded.value = !isExpanded.value;
+		};
+
+		const activeLink = ref("Home"); // Default active link is 'Home'
+
+		const setActiveLink = (linkName: string, event: Event) => {
+			event.preventDefault();
+			activeLink.value = linkName;
+		};
+
+		return { route, isExpanded, links, toggleMenu, activeLink, setActiveLink };
 	}
 });
 </script>
@@ -47,6 +69,10 @@ body {
   background-color: #f5f5f5;
   font-size: 110%;
   margin: 0;
+}
+
+.content {
+  margin: 20px;
 }
 
 /******************
@@ -70,7 +96,6 @@ h2 {
 }
 
 .page {
-  padding: 20px;
   background-color: #f5f5f5;
 }
 
@@ -132,6 +157,35 @@ nav.local li:last-child {
 
 nav.local > ul > li {
   width: 20%;
-  line-height: 3;
+  height: 75px;
+}
+
+@media (max-width: 480px) {
+  nav.local ul.flexbox_container {
+    flex-direction: column;
+  }
+
+  nav.local > ul > li {
+    width: 100%;
+  }
+
+  nav.local li {
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    padding: 10px 0; /* Add padding */
+    border-right: none;
+  }
+
+  nav.local li:first-child {
+    position: relative;
+  }
+
+  nav.local li.expanded:first-child::after {
+    transform: rotate(90deg); /* Rotate the arrow */
+  }
+
+  nav.local li:not(.active):not(.expanded) {
+    display: none;
+  }
 }
 </style>
