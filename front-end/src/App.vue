@@ -22,7 +22,8 @@
       <router-view v-if="route.path === '/'" name="contact"/>
 
       <!-- Footer Component -->
-      <FooterComponent v-if="route.path !== '/'"/>
+<!--      <FooterComponent v-if="route.path !== '/'"/>-->
+      <FooterComponent />
     </div>
   </div>
 </template>
