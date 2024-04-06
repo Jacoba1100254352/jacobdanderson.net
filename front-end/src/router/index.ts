@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from "vue-router";
+import {createRouter, createWebHistory, Router} from "vue-router";
 import HomePage from "@/views/HomePage.vue";
 import ProjectsPage from "@/views/ProjectsPage.vue";
 import ExperiencePage from "@/views/ExperiencePage.vue";
@@ -36,7 +36,7 @@ const routes = [
 	},
 ];
 
-const router = createRouter({
+const router : Router = createRouter({
 	history: createWebHistory(process.env.BASE_URL),
 	routes,
 });
