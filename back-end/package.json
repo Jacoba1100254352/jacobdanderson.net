@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/server.js",
-    "build": "rm -rf dist && tsc",
+    "build": "tsc",
     "watch": "tsc -w",
     "dev": "nodemon --exec ts-node src/server.ts",
     "lint": "eslint src/**/*.ts",
@@ -50,6 +50,19 @@
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended"
     ],
+    "overrides": [
+      {
+        "env": {
+          "node": true
+        },
+        "files": [
+          ".eslintrc.{js,cjs}"
+        ],
+        "parserOptions": {
+          "sourceType": "script"
+        }
+      }
+    ],
     "parserOptions": {
       "ecmaVersion": "latest",
       "parser": "@typescript-eslint/parser",
@@ -59,21 +72,22 @@
       "@typescript-eslint"
     ],
     "rules": {
-      "indent": ["error", "tab"],
-      "linebreak-style": ["error", "unix"],
-      "quotes": ["error", "double"],
-      "semi": ["error", "always"]
-    },
-    "overrides": [
-      {
-        "env": {
-          "node": true
-        },
-        "files": [".eslintrc.{js,cjs}"],
-        "parserOptions": {
-          "sourceType": "script"
-        }
-      }
-    ]
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
   }
 }

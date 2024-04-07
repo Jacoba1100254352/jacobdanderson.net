@@ -1,3 +1,10 @@
+<script lang="ts" setup>
+import {useMainStore} from "~/stores";
+
+const educationStore = useMainStore();
+const education = computed(() => educationStore.$state.userProfile.education);
+</script>
+
 <template>
   <div class="page">
     <h1>Education</h1>
@@ -8,21 +15,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import {computed, defineComponent} from "vue";
-import {useStore} from "vuex";
-
-export default defineComponent({
-	name: "EducationComponent",
-	setup() {
-		const store = useStore();
-		const education = computed(() => store.state.userProfile.education);
-
-		return {education};
-	}
-});
-</script>
 
 <style scoped>
 

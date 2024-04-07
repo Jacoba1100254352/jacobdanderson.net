@@ -1,9 +1,16 @@
 **/.DS_Store
-**/node_modules*
+**/node_modules
 **/.node_modules*.nosync
-**/package-lock*.json
+**/package-lock.json
 **/dist
 
+.vite-ssg-dist
+.vite-ssg-temp
+*.local
+dist-ssr
+.idea/
+*.log
+cypress/downloads
 
 # local env files
 .env.local
