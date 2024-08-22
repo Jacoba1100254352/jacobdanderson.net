@@ -106,11 +106,11 @@
 		"not ie 11"
 	],
 	"bugs": {
-		"url": "https://github.com/jacoba1100254352/therestauration.jacobdanderson.net/issues"
+		"url": "https://github.com/jacoba1100254352/jacobdanderson.net/issues"
 	},
-	"homepage": "https://github.com/jacoba1100254352/therestauration.jacobdanderson.net#readme",
+	"homepage": "https://github.com/jacoba1100254352/jacobdanderson.net#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/jacoba1100254352/therestauration.jacobdanderson.net.git"
+		"url": "git+https://github.com/jacoba1100254352/jacobdanderson.net.git"
 	}
 }
