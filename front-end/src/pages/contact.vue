@@ -65,10 +65,21 @@ function handleSubmit() {
 .form-group input[type="email"],
 .form-group textarea {
 	width: 100%;
-	min-width: 600px; /* Ensure input boxes are not narrower than this */
+	min-width: 600px;
 	padding: 8px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
+	background-color: #fff; /* Default light mode background */
+	color: #000; /* Default light mode text color */
+}
+
+/* Dark mode styles */
+body.dark .form-group input[type="text"],
+body.dark .form-group input[type="email"],
+body.dark .form-group textarea {
+	background-color: #333; /* Dark mode background */
+	color: #fff; /* Dark mode text color */
+	border: 1px solid #666; /* Dark mode border color */
 }
 
 button[type="submit"] {
@@ -88,11 +99,11 @@ button[type="submit"]:hover {
 	.item {
 		max-width: 100%;
 	}
-	
+
 	.form-group input[type="text"],
 	.form-group input[type="email"],
 	.form-group textarea {
-		min-width: auto; /* Resets min-width for small screens */
+		min-width: auto;
 	}
 }
 </style>

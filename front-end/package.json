@@ -23,7 +23,7 @@
 		"up": "taze major -I",
 		"postinstall": "npx simple-git-hooks",
 		"sizecheck": "npx vite-bundle-visualizer",
-		"lint-fix": "eslint --fix"
+		"lint-fix": ""
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -95,13 +95,8 @@
 		"pre-commit": "npx lint-staged"
 	},
 	"lint-staged": {
-		"*.js": [
-			"eslint --fix",
-			"git add"
-		],
-		"*.vue": [
-			"eslint --fix",
-			"git add"
+		"*.ts": [
+			""
 		]
 	},
 	"browserslist": [
