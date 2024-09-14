@@ -1,6 +1,6 @@
+import type { App } from "vue-demi";
 import type { Locale } from "vue-i18n";
 import { createI18n } from "vue-i18n";
-import type { App } from "vue-demi";
 import type { UserModule } from "~/types";
 
 // Import i18n resources

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import About from "~/pages/about.vue";
-import Projects from "~/pages/projects.vue";
 import Experience from "~/pages/experience.vue";
+import Projects from "~/pages/projects.vue";
 </script>
 
 <template>
@@ -47,7 +47,10 @@ import Experience from "~/pages/experience.vue";
 }
 </style>
 
-<route lang="yaml">
-meta:
-layout: default
+<route lang="json">
+{
+"meta": {
+"layout": "default"
+}
+}
 </route>

@@ -8,8 +8,10 @@ const about = computed(() => store.userProfile.about); // Accessing 'about' dire
 
 <template>
 	<div class="page">
-		<img v-if="$route.path === '/'" alt="Jacob Anderson Logo" class="logo"
-		     src="https://jacobdanderson.s3.amazonaws.com/images/Logo 2 Saywa.png">
+		<img
+			v-if="$route.path === '/'" alt="Jacob Anderson Logo" class="logo"
+			src="https://jacobdanderson.s3.amazonaws.com/images/Logo 2 Saywa.png"
+		>
 		<img
 			v-if="$route.path !== '/'" alt="Profile Picture" class="profile-pic"
 			src="https://jacobdanderson.s3.amazonaws.com/images/Jacob_Anderson.jpg"
@@ -42,7 +44,10 @@ const about = computed(() => store.userProfile.about); // Accessing 'about' dire
 }
 </style>
 
-<route lang="yaml">
-meta:
-layout: default
+<route lang="json">
+{
+"meta": {
+"layout": "default"
+}
+}
 </route>

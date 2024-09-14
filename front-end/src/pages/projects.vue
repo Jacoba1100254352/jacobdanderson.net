@@ -21,7 +21,10 @@ const projects = computed(() => store.userProfile.projects);
 
 </style>
 
-<route lang="yaml">
-meta:
-layout: default
+<route lang="json">
+{
+"meta": {
+"layout": "default"
+}
+}
 </route>

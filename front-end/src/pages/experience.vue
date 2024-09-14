@@ -22,7 +22,10 @@ const experience = computed(() => store.userProfile.experience);
 
 </style>
 
-<route lang="yaml">
-meta:
-layout: default
+<route lang="json">
+{
+"meta": {
+"layout": "default"
+}
+}
 </route>

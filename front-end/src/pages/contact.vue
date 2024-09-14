@@ -108,7 +108,10 @@ button[type="submit"]:hover {
 }
 </style>
 
-<route lang="yaml">
-meta:
-layout: default
+<route lang="json">
+{
+"meta": {
+"layout": "default"
+}
+}
 </route>
