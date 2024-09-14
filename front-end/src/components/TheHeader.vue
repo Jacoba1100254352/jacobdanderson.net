@@ -28,14 +28,15 @@ function setActiveLink(linkName: string) {
 		<nav class="flex-container">
 			<div class="logo-container">
 				<RouterLink to="/">
-					<img alt="Jacob Anderson Logo" class="logo" src="../assets/images/Logo 1 Saywa.png">
+					<img alt="Jacob Anderson Logo" class="logo"
+					     src="https://jacobdanderson.s3.amazonaws.com/images/Logo+1+Saywa.png">
 				</RouterLink>
 				<span class="site-name">Jacob Anderson</span>
 			</div>
 			<div class="hamburger" @click="toggleMenu">
-				<div :class="{ open: isExpanded }" class="bar"></div>
-				<div :class="{ open: isExpanded }" class="bar"></div>
-				<div :class="{ open: isExpanded }" class="bar"></div>
+				<div :class="{ open: isExpanded }" class="bar" />
+				<div :class="{ open: isExpanded }" class="bar" />
+				<div :class="{ open: isExpanded }" class="bar" />
 			</div>
 			<ul :class="{ expanded: isExpanded }" class="nav-links">
 				<li

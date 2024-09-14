@@ -8,10 +8,11 @@ const about = computed(() => store.userProfile.about); // Accessing 'about' dire
 
 <template>
 	<div class="page">
-		<img v-if="$route.path === '/'" alt="Jacob Anderson Logo" class="logo" src="../assets/images/Logo 2 Saywa.png">
+		<img v-if="$route.path === '/'" alt="Jacob Anderson Logo" class="logo"
+		     src="https://jacobdanderson.s3.amazonaws.com/images/Logo 2 Saywa.png">
 		<img
 			v-if="$route.path !== '/'" alt="Profile Picture" class="profile-pic"
-			src="../assets/images/Jacob_Anderson.jpg"
+			src="https://jacobdanderson.s3.amazonaws.com/images/Jacob_Anderson.jpg"
 		>
 		<h1>About Me</h1>
 		<div class="item">

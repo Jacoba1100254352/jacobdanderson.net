@@ -38,7 +38,7 @@ import Experience from "~/pages/experience.vue";
 	.projects-experience {
 		flex-direction: column;
 	}
-	
+
 	.projects,
 	.experience {
 		width: 100%;
@@ -47,60 +47,7 @@ import Experience from "~/pages/experience.vue";
 }
 </style>
 
-<!-- <script lang="ts" setup>
-defineOptions({
-  name: 'IndexPage',
-})
-const user = useUserStore()
-const name = ref(user.savedName)
-
-const router = useRouter()
-
-function go() {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
-}
-
-const { t } = useI18n()
-</script>
-
-<template>
-  <div>
-    <div text-4xl>
-      <div i-carbon-campsite inline-block />
-    </div>
-    <p>
-      <a href="https://github.com/antfu/vitesse" rel="noreferrer" target="_blank">
-        Vitesse
-      </a>
-    </p>
-    <p>
-      <em text-sm opacity-75>{{ t("intro.desc") }}</em>
-    </p>
-
-    <div py-4 />
-
-    <TheInput
-      v-model="name"
-      :placeholder="t('intro.whats-your-name')"
-      autocomplete="false"
-      @keydown.enter="go"
-    />
-    <label class="hidden" for="input">{{ t("intro.whats-your-name") }}</label>
-
-    <div>
-      <button
-        :disabled="!name"
-        m-3 text-sm btn
-        @click="go"
-      >
-        {{ t("button.go") }}
-      </button>
-    </div>
-  </div>
-</template>
-
 <route lang="yaml">
 meta:
-layout: home
-</route> -->
+layout: default
+</route>
