@@ -16,14 +16,14 @@ const about = computed(() => store.userProfile.about); // Accessing 'about' dire
 			v-if="$route.path !== '/'" alt="Profile Picture" class="profile-pic"
 			src="https://jacobdanderson.s3.amazonaws.com/images/Jacob_Anderson.jpg"
 		>
-		<h1>About Me</h1>
 		<div class="item">
+			<h1>About Me</h1>
 			<p>{{ about }}</p>
 		</div>
+		
+		<!-- Do not show Education Component on home page -->
+		<EducationComponent v-if="$route.path !== '/'" />
 	</div>
-	
-	<!-- Do not show Education Component on home page -->
-	<EducationComponent v-if="$route.path !== '/'" />
 </template>
 
 <style scoped>
