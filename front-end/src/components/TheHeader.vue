@@ -132,7 +132,7 @@ function setActiveLink(linkName: string) {
 	.hamburger {
 		display: flex;
 	}
-	
+
 	.nav-links {
 		display: none;
 		flex-direction: column;
@@ -140,7 +140,8 @@ function setActiveLink(linkName: string) {
 		background-color: #fff;
 		position: absolute;
 		top: 60px;
-		left: 0;
+		left: 0; /* Center horizontally */
+		transform: translateX(-3%); /* Shift to the center */
 		padding: 20px;
 		border-top: 1px solid #ccc;
 		border-bottom: 1px solid #ccc;
